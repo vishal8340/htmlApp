@@ -1,36 +1,113 @@
-<div id="container">
-  <div id="content">
-    <div id="about">
-      <h1>
-        <div style='float:left; margin-bottom:20px;'>
-          Zach Saucier
+<!DOCTYPE html>
+<html>
+<head>
+<title>htmlApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/changes.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--Company Header Starting  -->
+<div class="jumbotron text-center">
+  <h1>Live site</h1>
+  <p>just for testing</p>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" placeholder="Search Items" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- Company Header Ending -->
+
+<!-- Starting Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+
+<!--         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+ -->      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End of Navigation Bar -->
+
+<!-- Start of Login Form List -->
+<div class="products" style="background-color: #E6F9E6;">
+
+	<p class="tab"  align="center" style="color:brown;" id="message">Login Here</p><br>
+  <div class="tab"  align="center">
+    
+    <div style="margin: 5px">
+      
+        <form action="./LoginSrv" method="post">
+          Username: <input type="text" name="username"style="font-size: 15px;font-weight: normal;" placeholder="Enter Email-Id" required><br/><br/>
+          Password: <input type="password" name="password"style="font-size: 15px;font-weight: normal;" placeholder="Enter Password" required><br/><br/>
+          Login As: <select name="usertype" style="font-size: 16px;" required>
+                      <option value="customer">Customer</option>
+                      <option value="admin">Admin</option>
+                    </select> 
+                    &nbsp;&nbsp;
+                    <input type="submit" value=" Login ">
+        </form>
+    </div>  
+  </div>
+  <div class="tab" style="margin-top: 10px;text-align: center">
+      <a href="register.html">New User ? Register Here</a>
+
+  </div>
+</div>
+
+
+<!-- ENd of Product Items List -->
+
+
+<!-- Start the footer Contacts -->
+<a name="contact"></a>
+<div class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>support !</em></p>
+  <div class="row test">
+    <div class="col-md-4">
+      <p>Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>sasaram, Bihar</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91 8340195207</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: vishalkumar834019@gmail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
-        <div class="stage">
-          <div class="pyramid3d">
-            <div class="triangle side1"></div>
-            <div class="triangle side2"></div>
-            <div class="triangle side3"></div>
-            <div class="triangle side4"></div>
-          </div>
-        </div> 
-      </h1>
-      <h3 style='clear:both' class="subhead">
-        <a href="https://plus.google.com/108495471566196018473/posts">Zach</a> is an enthusiastic, young, self-taught web applications developer currently studying at the University of Georgia.
-      </h3>
-      <p id='pleft'>
-        He does freelance work, writes for <a href="https://css-tricks.com/css-animation-tricks/">CSS</a> <a href="https://css-tricks.com/controlling-css-animations-transitions-javascript/">Tricks</a>, worked at <a href="http://deltadatasoft.com/">Delta Data Software</a> as a front-end developer, and is continuously working on personal projects to up his game.
-      </p>
-      <p id='pright'>
-        Look for some of his work &amp; experiments on <a href="https://codepen.io/Zeaklous">CodePen</a>, <a href="http://stackoverflow.com/users/2065702/zeaklous">StackOverflow</a>, <a href="https://cssdeck.com/user/Zeaklous">CSS Deck</a>, or a bit of his recent work below.
-      </p>
-      <ul>
-        <li><a href="https://cssdeck.com/labs/css-only-full-page-slider">CSS Only Full Page Slider</a></li>
-        <li><a href="https://codepen.io/Zeaklous/pen/alpEm">CSS3 Circular Questionnaire (Plugin in development)</a></li>
-        <li><a href="https://zachsaucier.com/TumblrBook.html">TumblrBook</a></li>
-      </ul>
-      <p>
-        Feel free to contact him at zachsaucier[at]gmail.com if you'd like for him to work for you!
-      </p>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<!-- End of Contact or about us -->
+
+</body>
+</html>
